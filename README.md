@@ -1,7 +1,7 @@
 [![github.com/marcomontilla](https://avatars2.githubusercontent.com/u/25273655?v=4&s=120)](https://github.com/marcomontilla/)
 
 # Trillo
-This repo contains the source code for the front-end for **Trillo**, to see the live demo go [here - Trillo](https://marcomontilla.github.edu/trillo/)
+This repo contains the source code for the front-end for **Trillo**, to see the live demo go [here - Trillo](https://marcomontilla.github.io/trillo/)
 
 
 ### Getting Started
