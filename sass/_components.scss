@@ -31,7 +31,7 @@
 		width: 90%;
 		transition: all .2s;
 		margin-right: -3.5rem;
-		
+
 		@include respond(small) {
 			width: 80%;
 		}
@@ -40,7 +40,7 @@
 			outline: none;
 			width: 100%;
 			background-color: var(--color-grey-light-3);
-			
+
 			@include respond(small) {
 				width: 90%;
 			}
@@ -134,13 +134,13 @@
 	// 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	// 	z-index: 10000;
 	// }
-	
+
 	// &__drop-item{
 	// 	color: black;
 	// 	padding: 12px 16px;
 	// 	text-decoration: none;
 	// 	display: block;
-		
+
 	// 	&:hover {
 	// 		background-color: #ddd;
 	// 	}
@@ -178,7 +178,7 @@
 	font-size: 1.4rem;
 	list-style: none;
 	margin-top: 3.5rem;
-	
+
 	@include respond(tab-port) {
 		display: flex;
 		margin: 0;
@@ -189,7 +189,7 @@
 
 		&:not(:last-child) {
 			margin-bottom: .5rem;
-			
+
 			@include respond(tab-port) {
 				margin: 0;
 			}
@@ -241,7 +241,7 @@
 			justify-content: center;
 			padding: 2rem;
 		}
-		
+
 		@include respond(phone) {
 			flex-direction: column;
 			padding: 1.5rem .5rem;
@@ -281,49 +281,49 @@
 // GALLERY
 .gallery {
 	display: flex;
-	
+
 	&__item {
 		position: relative;
 	}
-	
+
 	&__photo {
 		width: 100%;
 		display: block;
-		
-		&-overlay:hover {
-			opacity: 1;
-		}
+	}
 
-		&-overlay {
-			cursor: pointer;
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 100%;
-			opacity: 0;
-			transition: .5s ease;
-			background-color: rgba(186,38,93,.75); 
-			// background-color: rgba(0,0,0,.75); 
-		}
+	&__photo-overlay:hover {
+		opacity: 1;
+	}
 
-		&-text {
-			cursor: inherit;
-			color: #fff;
-			font-size: 3rem;
-			font-weight: 300;
-			position: absolute;
+	&__photo-overlay {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .5s ease;
+		background-color: rgba(186, 38, 93, .75);
+		// background-color: rgba(0,0,0,.75); 
+	}
 
-			top: 50%;
-			left: 50%;
-			-webkit-transform: translate(-50%, -50%);
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			text-align: center;
-			
-			@include respond(tab-port){
-				font-size: 1.5rem;
-			}
+	&__photo-text {
+		cursor: inherit;
+		color: #fff;
+		font-size: 3rem;
+		font-weight: 300;
+		position: absolute;
+
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		text-align: center;
+
+		@include respond(tab-port) {
+			font-size: 1.5rem;
 		}
 	}
 }
@@ -359,7 +359,7 @@
 		}
 	}
 
-	
+
 	&__icon-star,
 	&__icon-location {
 		width: 1.75rem;
@@ -367,20 +367,20 @@
 		fill: var(--color-primary);
 	}
 
-	&__icon-star{
+	&__icon-star {
 		@include respond(small) {
 			width: 1.40rem;
 			height: 1.40rem;
 		}
 	}
-	
+
 	&__location {
 		font-size: 1.2rem;
 		display: flex;
 		align-items: center;
 		margin-left: .5rem;
 	}
-	
+
 	&__icon-location {
 		margin-right: .5rem;
 
@@ -410,7 +410,7 @@
 		font-size: 2.25rem;
 		font-weight: 300;
 		margin-bottom: -3px;
-		
+
 		@include respond(phone) {
 			font-size: 1.8rem;
 		}
@@ -447,7 +447,7 @@
 		margin-left: 3px;
 		transition: margin-left .2s;
 	}
-	
+
 	&:hover {
 		color: var(--color-grey-dark-1);
 
@@ -455,7 +455,7 @@
 			margin-left: 8px;
 		}
 	}
-	
+
 	&:focus {
 		outline: none;
 		animation: pulsate 1s infinite;
@@ -463,17 +463,17 @@
 }
 
 @keyframes pulsate {
-	0%{
+	0% {
 		transform: scale(1);
 		box-shadow: none;
 	}
-	
-	50%{
+
+	50% {
 		transform: scale(1.05);
-		box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+		box-shadow: 0 1rem 4rem rgba(0, 0, 0, .25);
 	}
-	
-	100%{
+
+	100% {
 		transform: scale(1);
 		box-shadow: none;
 	}
@@ -504,19 +504,19 @@
 		margin-bottom: .7rem;
 	}
 
-	&__item::before{
+	&__item::before {
 		content: "";
 		display: inline-block;
 		height: 1rem;
 		width: 1rem;
 		margin-right: .7rem;
-		
+
 		// Old Browsers
 		background-image: url(../img/chevron-thin-right.svg);
 		background-size: cover;
 
 		// New Browsers - masks
-		@supports (-webkit-mask-image: url()) or (mask-image: url()){
+		@supports (-webkit-mask-image: url()) or (mask-image: url()) {
 			background-color: var(--color-primary);
 			-webkit-mask-image: url(../img/SVG/chevron-thin-right.svg);
 			-webkit-mask-size: cover;
@@ -539,12 +539,12 @@
 	justify-content: space-between;
 	align-items: center;
 
-	&__count{
+	&__count {
 		// Para poner las fotos a la izquierda pero ya lo Hago con justify-content: space-between;
-		margin-right: auto; 
+		margin-right: auto;
 	}
 
-	&__friends{
+	&__friends {
 		display: flex;
 	}
 
@@ -554,8 +554,8 @@
 		width: 4rem;
 		border-radius: 50%;
 		border: 3px solid #fff;
-		
-		&:not(:last-child){
+
+		&:not(:last-child) {
 			margin-right: -2rem;
 		}
 	}
@@ -577,61 +577,61 @@
 	&:hover {
 		box-shadow: var(--shadow-dark);
 	}
-	
+
 	@include respond(tab-port) {
 		padding: 2rem;
 		margin-bottom: 3rem;
 		align-self: stretch;
 	}
-	
-	&__text{
+
+	&__text {
 		margin-bottom: 2rem;
 		z-index: 10;
 		position: relative;
 	}
 
-	&__user{
+	&__user {
 		display: flex;
 		align-content: center;
 		align-items: center;
 	}
 
-	&__photo{
+	&__photo {
 		height: 4.5rem;
 		width: 4.5rem;
 		border-radius: 50%;
 		margin-right: 1.5rem;
 	}
 
-	&__user-box{
+	&__user-box {
 		// flex: 1; Same -> margin-right: auto;
 		margin-right: auto;
 	}
 
-	&__user-name{
+	&__user-name {
 		font-size: 1.1rem;
 		font-weight: 600;
 		text-transform: uppercase;
 		margin-bottom: .4rem;
 	}
 
-	&__user-date{
+	&__user-date {
 		font-size: 1rem;
 		color: var(--color-grey-dark-3);
 	}
 
-	&__rating{
+	&__rating {
 		color: var(--color-primary);
 		font-size: 2.2rem;
 		font-weight: 300;
 	}
 
-	&::before{
+	&::before {
 		content: "\201C";
 		position: absolute;
 		top: -2.75rem;
 		left: -1rem;
-		line-height: 1;		
+		line-height: 1;
 		font-size: 20rem;
 		color: var(--color-grey-light-2);
 		font-family: sans-serif;
@@ -646,16 +646,16 @@
 .cta {
 	padding: 3.5rem 0;
 	text-align: center;
-	
+
 	@include respond(tab-port) {
 		padding: 2.5rem 0;
 	}
 
-	&__book-now{
+	&__book-now {
 		font-size: 2rem;
 		font-weight: 300;
 		text-transform: uppercase;
-		margin-bottom: 2.5rem;	
+		margin-bottom: 2.5rem;
 	}
 }
 
@@ -663,7 +663,7 @@
 /////////////////////////////////
 // CALL TO ACTION
 
-.btn{
+.btn {
 	font-size: 1.5rem;
 	font-weight: 300;
 	text-transform: uppercase;
@@ -674,7 +674,7 @@
 	position: relative;
 	overflow: hidden;
 
-	& > * {
+	&>* {
 		display: inline-block;
 		height: 100%;
 		width: 100%;
@@ -699,7 +699,7 @@
 	&:hover &__visible {
 		transform: translateY(100%);
 	}
-		
+
 	&:hover &__invisible {
 		top: 0;
 	}
