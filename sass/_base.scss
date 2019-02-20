@@ -26,6 +26,12 @@
       @content;
     } //1100px
 	}
+
+	@if $breakpoint==small {
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    } //500px
+	}
 }
 
 

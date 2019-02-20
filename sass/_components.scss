@@ -14,6 +14,12 @@
 	align-items: center;
 	justify-content: center;
 
+	@include respond(small) {
+		order: 1;
+		flex: 0 0 100%;
+		background-color: var(--color-grey-light-2);
+	}
+
 	&__input {
 		font-family: inherit;
 		font-size: inherit;
@@ -25,11 +31,19 @@
 		width: 90%;
 		transition: all .2s;
 		margin-right: -3.5rem;
+		
+		@include respond(small) {
+			width: 80%;
+		}
 
 		&:focus {
 			outline: none;
 			width: 100%;
 			background-color: var(--color-grey-light-3);
+			
+			@include respond(small) {
+				width: 90%;
+			}
 		}
 
 		&::-webkit-input-placeholder {
@@ -190,7 +204,6 @@
 		color: var(--color-grey-light-1);
 		text-decoration: none;
 		text-transform: uppercase;
-		// display: block;
 		padding: 1.5rem 3rem;
 		z-index: 100;
 
@@ -201,6 +214,11 @@
 			justify-content: center;
 			padding: 2rem;
 		}
+		
+		@include respond(phone) {
+			flex-direction: column;
+			padding: 1.5rem .5rem;
+		}
 	}
 
 	&__icon {
@@ -208,6 +226,12 @@
 		height: 1.75rem;
 		margin-right: 2rem;
 		fill: currentColor;
+
+		@include respond(phone) {
+			margin: 0 0 .7rem 0;
+			height: 1.5rem;
+			width: 1.5rem;
+		}
 	}
 }
 
@@ -253,6 +277,11 @@
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		padding: 1.5rem 3rem;
+
+		@include respond(phone) {
+			font-size: 1.8rem;
+			padding: 1.25rem 2rem;
+		}
 	}
 
 	&__stars {
@@ -288,17 +317,30 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
+		@include respond(phone) {
+			padding: 0 1.5rem;
+		}
 	}
 
 	&__rating-average {
 		font-size: 2.25rem;
 		font-weight: 300;
 		margin-bottom: -3px;
+		
+		@include respond(phone) {
+			font-size: 1.8rem;
+		}
 	}
 
 	&__rating-count {
 		font-size: .8rem;
 		text-transform: uppercase;
+		text-align: center;
+
+		@include respond(phone) {
+			font-size: .5rem;
+		}
 	}
 
 }
@@ -444,6 +486,7 @@
 	@include respond(tab-port) {
 		padding: 2rem;
 		margin-bottom: 3rem;
+		align-self: stretch;
 	}
 	
 	&__text{
