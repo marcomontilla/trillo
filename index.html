@@ -14,6 +14,13 @@
 </head>
 
 <body>
+  <div class="external">
+    <div class="input-external">
+      <input type="color" name="color" id="color" value="#EB2F64">
+    </div>
+    <label for="color">Select Color</label>
+  </div>
+
   <div class="container">
     <header class="header">
       <img src="img/logo.png" alt="trillo logo" class="logo" />
@@ -240,6 +247,42 @@
       </main>
     </div>
   </div>
+  <script>
+    const root = document.documentElement;
+    const inputs = [].slice.call(document.querySelectorAll('input'));
+
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+
+    function ColorLuminance(hex, lum) {
+
+      // validate hex string
+      hex = String(hex).replace(/[^0-9a-f]/gi, '');
+      if (hex.length < 6) {
+        hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+      }
+      lum = lum || 0;
+
+      // convert to decimal and change luminosity
+      var rgb = "#",
+        c, i;
+      for (i = 0; i < 3; i++) {
+        c = parseInt(hex.substr(i * 2, 2), 16);
+        c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+        rgb += ("00" + c).substr(c.length);
+      }
+
+      return rgb;
+    }
+
+    function handleUpdate(e) {
+      if (this.type === 'color') {
+        root.style.setProperty('--color-primary', ColorLuminance(this.value, 0))
+        root.style.setProperty('--color-primary-light', ColorLuminance(this.value, 0.1))
+        root.style.setProperty('--color-primary-dark', ColorLuminance(this.value, -0.4))
+      }
+    }
+  </script>
 </body>
 
 </html>
