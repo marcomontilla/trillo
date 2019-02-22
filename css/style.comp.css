@@ -64,8 +64,8 @@ body {
     -webkit-appearance: none;
     border: none;
     cursor: pointer;
-    width: 10rem;
-    height: 10rem; }
+    width: 11rem;
+    height: 11rem; }
     .input-external input[type="color"]::-webkit-color-swatch-wrapper {
       padding: 0; }
     .input-external input[type="color"]::-webkit-color-swatch {
